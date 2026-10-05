@@ -8,7 +8,11 @@ from app.shared.config.settings import settings
 TOKEN_ALGORITHM: Literal["HS256"] = "HS256"
 
 
-def create_token_pair(subject: str, role: str) -> tuple[str, str, int]:
+def create_token_pair(
+    subject: str,
+    role: str,
+    token_version: int = 0,
+) -> tuple[str, str, int]:
     now = datetime.now(UTC)
     access_expires_at = now + timedelta(minutes=settings.jwt_access_token_minutes)
     refresh_expires_at = now + timedelta(days=settings.jwt_refresh_token_days)
@@ -19,6 +23,7 @@ def create_token_pair(subject: str, role: str) -> tuple[str, str, int]:
             "sub": subject,
             "role": role,
             "token_type": "access",
+            "token_version": token_version,
             "iat": now,
             "exp": access_expires_at,
         },
@@ -30,6 +35,7 @@ def create_token_pair(subject: str, role: str) -> tuple[str, str, int]:
             "sub": subject,
             "role": role,
             "token_type": "refresh",
+            "token_version": token_version,
             "iat": now,
             "exp": refresh_expires_at,
         },

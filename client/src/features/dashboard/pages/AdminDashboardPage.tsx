@@ -16,10 +16,10 @@ import {
   TeamOutlined,
   WalletOutlined,
 } from '@ant-design/icons';
-import { Avatar, Button, Input, Tag, Typography } from 'antd';
+import { Avatar, Button, Input, Tag, Typography, message } from 'antd';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { clearAuthSession } from '../../auth/store/authStore';
+import { useLogout } from '../../auth/hooks/useLogout';
 
 const { Text, Title } = Typography;
 
@@ -52,8 +52,10 @@ const navigationItems = [
   { label: 'Báo cáo', icon: <BookOutlined />, href: '#reports', active: false },
 ];
 
-function DashboardPage() {
+function AdminDashboardPage() {
   const navigate = useNavigate();
+  const [messageApi, contextHolder] = message.useMessage();
+  const { submitLogout } = useLogout();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const today = new Intl.DateTimeFormat('vi-VN', {
     weekday: 'long',
@@ -62,12 +64,21 @@ function DashboardPage() {
     year: 'numeric',
   }).format(new Date());
 
-  function handleLogout() {
-    clearAuthSession();
-    navigate('/');
+  async function handleLogout() {
+    try {
+      await submitLogout();
+    } catch {
+      messageApi.warning(
+        'Đã đăng xuất khỏi thiết bị này, nhưng máy chủ chưa thu hồi được phiên.',
+      );
+    } finally {
+      navigate('/');
+    }
   }
 
   return (
+    <>
+    {contextHolder}
     <main id="overview" className="min-h-screen bg-[#f7f9f7] text-[#25382c]">
       <aside className="fixed inset-y-0 left-0 z-20 hidden w-[248px] flex-col border-r border-[#edf0ec] bg-white px-5 py-7 lg:flex">
         <a href="#overview" className="mb-10 flex items-center gap-3 px-2 no-underline">
@@ -409,7 +420,8 @@ function DashboardPage() {
         </div>
       </div>
     </main>
+    </>
   );
 }
 
-export default DashboardPage;
+export default AdminDashboardPage;

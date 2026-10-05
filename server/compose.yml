@@ -4,7 +4,7 @@ services:
     container_name: tuition-fees-api
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/payment
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/tuition-fees
       JWT_SECRET_KEY: ${JWT_SECRET_KEY:?Set JWT_SECRET_KEY in .env}
       JWT_ACCESS_TOKEN_MINUTES: ${JWT_ACCESS_TOKEN_MINUTES:-15}
       JWT_REFRESH_TOKEN_DAYS: ${JWT_REFRESH_TOKEN_DAYS:-7}
@@ -16,10 +16,10 @@ services:
 
   postgres:
     image: postgres:18
-    container_name: payment-postgres
+    container_name: tuition-fees-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: payment
+      POSTGRES_DB: tuition-fees
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
@@ -27,7 +27,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d payment"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d tuition-fees"]
       interval: 10s
       timeout: 5s
       retries: 5

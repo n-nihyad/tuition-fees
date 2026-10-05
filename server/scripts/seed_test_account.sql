@@ -1,4 +1,4 @@
-INSERT INTO payers (
+INSERT INTO users (
     id,
     username,
     password_hash,
@@ -18,5 +18,6 @@ VALUES (
     'payer@example.com',
     1000000.00,
     TRUE,
-    'user'
-);
+    'student'
+)
+ON CONFLICT (username) DO NOTHING;

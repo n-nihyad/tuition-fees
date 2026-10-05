@@ -8,6 +8,10 @@ export function saveAuthSession(session: LoginResponse): void {
   sessionStorage.setItem(REFRESH_TOKEN_KEY, session.refreshToken)
 }
 
+export function getAccessToken(): string | null {
+  return sessionStorage.getItem(ACCESS_TOKEN_KEY)
+}
+
 export function clearAuthSession(): void {
   sessionStorage.removeItem(ACCESS_TOKEN_KEY)
   sessionStorage.removeItem(REFRESH_TOKEN_KEY)

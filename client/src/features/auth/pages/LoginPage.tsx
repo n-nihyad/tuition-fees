@@ -26,7 +26,19 @@ function LoginPage() {
     try {
       const session = await submitLogin(values.username, values.password);
       messageApi.success(`Đăng nhập thành công! Vai trò: ${session.role}`);
-      navigate('/dashboard');
+      switch (session.role) {
+      case 'admin':
+        navigate('/admin/dashboard');
+        break;
+
+      case 'student':
+        navigate('/user/dashboard');
+        break;
+
+      default:
+        messageApi.error('Vai trò tài khoản không hợp lệ.');
+        break;
+    }
     } catch (error) {
       messageApi.error(
         error instanceof Error

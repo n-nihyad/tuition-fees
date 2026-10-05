@@ -13,3 +13,7 @@ class LoginResponse(BaseModel):
     refresh_token: str = Field(serialization_alias="refreshToken")
     expires_in: int = Field(serialization_alias="expiresIn")
     role: str
+
+
+class CurrentUserResponse(BaseModel):
+    role: str

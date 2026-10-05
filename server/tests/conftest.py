@@ -6,5 +6,5 @@ os.environ.setdefault(
 )
 os.environ.setdefault(
     "DATABASE_URL",
-    "postgresql+asyncpg://postgres:postgres@localhost:5432/payment",
+    "postgresql+asyncpg://postgres:postgres@localhost:5432/tuition-fees",
 )

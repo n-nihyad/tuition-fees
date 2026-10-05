@@ -11,7 +11,14 @@ export interface LoginResponse {
 }
 
 const AUTH_API_URL =
-  import.meta.env.VITE_AUTH_API_URL ?? 'http://localhost:8000/api/v1/auth'
+  import.meta.env.VITE_AUTH_API_URL ?? '/api/v1/auth'
+
+export class UnauthorizedSessionError extends Error {
+  constructor() {
+    super('Phiên đăng nhập đã hết hạn hoặc đã bị thu hồi.')
+    this.name = 'UnauthorizedSessionError'
+  }
+}
 
 function isLoginResponse(value: unknown): value is LoginResponse {
   if (typeof value !== 'object' || value === null) {
@@ -65,4 +72,51 @@ export async function login(request: LoginRequest): Promise<LoginResponse> {
   }
 
   return payload
+}
+
+export async function logout(accessToken: string): Promise<void> {
+  const response = await fetch(`${AUTH_API_URL.replace(/\/$/, '')}/logout`, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      Authorization: `Bearer ${accessToken}`,
+    },
+  })
+
+  if (!response.ok && response.status !== 401) {
+    throw new Error(
+      `Không thể thu hồi phiên đăng nhập trên máy chủ (HTTP ${response.status}).`,
+    )
+  }
+}
+
+export async function getCurrentUser(
+  accessToken: string,
+): Promise<{ role: string }> {
+  const response = await fetch(`${AUTH_API_URL.replace(/\/$/, '')}/me`, {
+    headers: {
+      Accept: 'application/json',
+      Authorization: `Bearer ${accessToken}`,
+    },
+  })
+
+  if (response.status === 401) {
+    throw new UnauthorizedSessionError()
+  }
+
+  if (!response.ok) {
+    throw new Error(`Không thể xác thực phiên đăng nhập (HTTP ${response.status}).`)
+  }
+
+  const payload: unknown = await response.json()
+  if (
+    typeof payload !== 'object' ||
+    payload === null ||
+    !('role' in payload) ||
+    typeof payload.role !== 'string'
+  ) {
+    throw new Error('Phản hồi xác thực từ máy chủ không đúng định dạng.')
+  }
+
+  return { role: payload.role }
 }
