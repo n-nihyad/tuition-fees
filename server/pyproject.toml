@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tuition-fees-backend"
+version = "0.1.0"
+description = "Tuition fee payment API"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.15",
+    "asyncpg>=0.30",
+    "fastapi>=0.115",
+    "PyJWT>=2.10",
+    "pwdlib[argon2]>=0.2",
+    "pydantic-settings>=2.7",
+    "python-dotenv>=1.0",
+    "SQLAlchemy[asyncio]>=2.0",
+    "uvicorn[standard]>=0.34",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx>=0.28",
+    "pytest>=8.3",
+    "pytest-asyncio>=0.25",
+    "pytest-mock>=3.14",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
