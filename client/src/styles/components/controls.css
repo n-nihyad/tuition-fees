@@ -1,0 +1,113 @@
+.ant-btn:not(:disabled) {
+  transition:
+    transform 160ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.ant-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.ant-btn:not(:disabled):active {
+  transform: translateY(0) scale(0.98);
+}
+
+.status-tag.ant-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding-inline: 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.status-tag--success.ant-tag {
+  color: #14532d;
+  background: #dcfce7;
+  border-color: #bbf7d0;
+}
+
+.status-tag--pending.ant-tag {
+  color: #713f12;
+  background: #fef3c7;
+  border-color: #fde68a;
+}
+
+.status-tag--failed.ant-tag {
+  color: #7f1d1d;
+  background: #fee2e2;
+  border-color: #fecaca;
+}
+
+.status-tag--expired.ant-tag {
+  color: #334155;
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.status-tag--default.ant-tag {
+  color: #334155;
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  transition: background-color 160ms ease;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr:hover > td {
+  background: #f7faf7 !important;
+}
+
+@keyframes content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  color: #687b70;
+  background: #f5f8f4;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .feedback-screen--full {
+    padding: 16px;
+  }
+
+  .feedback-card {
+    border-radius: 20px;
+    padding: 30px 22px 25px;
+  }
+}
+
+::selection {
+  color: #fff;
+  background: #347653;
+}
+
+

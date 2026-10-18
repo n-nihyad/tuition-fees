@@ -1,0 +1,21 @@
+/* Ant Design components retain the portal palette and existing layout. */
+.rose-nav .portal-menu { width: 100%; min-width: 0; background: transparent; border-bottom: 0; line-height: 42px; }
+.rose-nav .portal-menu > .ant-menu-item { margin-inline: 2px; border-radius: 11px; font-weight: 500; }
+.rose-nav .portal-menu > .ant-menu-item-selected { font-weight: 600; }
+.rose-nav .portal-menu a { display: inline; background: transparent; box-shadow: none; border-radius: 0; text-shadow: none; }
+.rose-nav .portal-menu .portal-icon { font-size: 18px; }
+.rose-login .portal-chevron, .rose-nav .portal-chevron { font-size: 11px; }
+.rose-ui .empty-history-icon { font-size: 30px; }
+.rose-ui footer .portal-icon { font-size: 14px; }
+.edge-otp .ant-otp { width: min(100%, 340px); gap: 8px; }
+.edge-otp .ant-otp-input { width: 100%; min-width: 0; height: 48px; font-size: 22px; font-weight: 600; }
+.edge-ui .edge-otp .ant-otp-input { min-height: 48px; letter-spacing: normal; }
+.portal-payment-result.ant-result { padding: 20px 0 12px; }
+.portal-payment-result .ant-result-icon { margin-bottom: 12px; }
+.portal-payment-result .ant-result-icon > .anticon { font-size: 44px; }
+.portal-payment-result .ant-result-title { font-size: 20px; }
+.portal-payment-result .ant-result-extra { margin-top: 12px; }
+@media (max-width: 1100px) {
+  .rose-nav nav { flex-basis: 100%; }
+}
+

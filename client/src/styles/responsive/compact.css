@@ -1,0 +1,9 @@
+@media (max-width: 575px) {
+  .edge-ui .ant-card > .ant-card-body { padding: 22px 20px; }
+  .edge-ui .ant-card .ant-card-head { padding-inline: 20px; min-height: 60px; }
+  .edge-ui .edge-recent > .ant-card-body { padding: 4px 0; }
+  .edge-ui .edge-recent-row { padding-inline: 20px; }
+  .rose-ui .rose-history > .ant-card-body { padding: 10px; }
+  .rose-ui .rose-stat span { font-size: 12px; }
+  .rose-ui .rose-hero .edge-overview-content, .rose-ui .rose-activity .edge-overview-content { min-height: 180px; }
+}

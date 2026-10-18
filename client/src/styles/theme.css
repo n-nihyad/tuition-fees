@@ -1,0 +1,97 @@
+/* Rose / sage fintech exploration. Palette comes from tailwind.config.js. */
+.rose-ui, .rose-login {
+  --rose: theme('colors.brand-pink');
+  --sage: theme('colors.brand-green');
+  --forest: theme('colors.brand-forest');
+  --rose-ink: #87445e;
+}
+.rose-ui {
+  background-color: #faf7f3;
+  background-image: radial-gradient(ellipse at 46% 46%, rgb(255 255 255 / 92%), transparent 44rem);
+  padding-top: 1px;
+}
+.rose-ui .rose-nav {
+  border-color: rgb(222 163 183 / 65%);
+  box-shadow: 0 18px 40px -16px rgb(95 49 68 / 24%), 0 5px 12px -5px rgb(25 59 45 / 12%), 0 1px 0 rgb(255 255 255 / 95%) inset;
+}
+.rose-ui .rose-brand-mark { background: white; border-radius: 13px; border: 1px solid #e2eae3; box-shadow: 0 5px 15px rgb(41 78 50 / 7%); }
+.rose-ui .rose-wallet-chip { background: #fbeaf0; border-color: #f5d0dd; }
+.rose-ui .ant-card { border-radius: 22px; box-shadow: 0 6px 28px -24px rgb(70 34 48 / 25%); }
+.rose-ui .ant-card:hover { box-shadow: 0 6px 28px -24px rgb(70 34 48 / 25%); }
+.rose-ui .ant-card .ant-card-head { border-bottom-color: #f4e9ed; }
+.rose-ui .ant-card .ant-card-head-title { font-weight: 600; }
+.rose-ui .ant-card .ant-card-extra a { color: #6b755f; }
+.rose-ui .rose-hero.ant-card { position: relative; overflow: hidden; background: var(--rose); isolation: isolate; border-radius: 26px 26px 8px 26px; }
+.rose-ui .rose-hero .edge-overview-content { position: relative; z-index: 1; min-height: 245px; gap: 26px; }
+.rose-ui .rose-hero-copy { max-width: 70%; }
+.rose-ui .rose-kicker { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .16em; color: #61424e; margin-bottom: 16px; }
+.rose-ui .rose-hero .edge-overview-content h3.ant-typography { font-size: clamp(30px, 3.1vw, 44px); line-height: 1.13; letter-spacing: -.045em; font-weight: 600; color: var(--forest); }
+.rose-ui .rose-hero h3 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -.055em; }
+.rose-ui .rose-hero .ant-typography-secondary { color: #624b54; font-size: 13px; margin-top: 14px; }
+.rose-ui .edge-primary-link { background: var(--forest); border-radius: 999px; padding: 12px 22px; min-height: 46px; gap: 30px; font-size: 13px; box-shadow: 0 6px 18px -10px rgb(25 59 45 / 50%); }
+.rose-ui .edge-primary-link:hover { background: #285a40; box-shadow: 0 8px 20px -10px rgb(25 59 45 / 60%); }
+.rose-ui .edge-primary-link .anticon { transition: transform 180ms ease; }
+.rose-ui .edge-primary-link:hover .anticon { transform: translateX(3px); }
+.rose-ui .rose-activity .edge-overview-content { min-height: 245px; }
+.rose-ui .rose-activity .edge-stats { gap: 12px; }
+.rose-ui .rose-stat { padding: 18px 14px 20px; background: #f0f6ed; border-radius: 16px; }
+.rose-ui .rose-stat:nth-child(2) { background: var(--sage); }
+.rose-ui .rose-stat.edge-pending { background: #fce8ef; color: inherit; }
+.rose-ui .rose-stat.edge-pending strong { color: #8b5d2b; }
+.rose-ui .rose-stat span { color: #5e715f; font-size: 12px; }
+.rose-ui .rose-stat strong { color: var(--forest); font-size: 36px; }
+.rose-ui .edge-stat-footer { gap: 8px; }
+.rose-ui .edge-stat-footer small { color: #74806b; }
+.rose-ui .edge-recent .ant-card-head { position: relative; }
+.rose-ui .edge-recent .ant-card-head::before { content: ''; height: 24px; width: 5px; border-radius: 99px; background: var(--rose); position: absolute; left: 14px; top: 24px; }
+.rose-ui .edge-recent-row { border-bottom-color: #f1e9ed; }
+.rose-ui .edge-recent-name strong { font-weight: 500; }
+.rose-ui .edge-recent-value strong { font-size: 17px; letter-spacing: -.025em; }
+.rose-ui .rose-payment { overflow: hidden; }
+.rose-ui .rose-payment > .ant-card-head { background: linear-gradient(100deg, #fff 45%, #fff2f6); }
+.rose-ui .rose-payment .edge-payer { align-items: center; }
+.rose-ui .rose-balance { padding: 13px 17px; border-radius: 14px; background: #fce8ef; }
+.rose-ui .rose-balance strong { font-variant-numeric: tabular-nums; font-size: 16px; letter-spacing: -.025em; color: var(--forest); }
+.rose-ui .edge-fee-panel { border-top-color: #f0e5e9; }
+.rose-ui .edge-payment-amount { color: var(--forest); font-weight: 600; }
+.rose-ui .edge-otp input { border-radius: 14px; background: #fff7fa; }
+.rose-ui .edge-otp { border-top-color: #f0e5e9; }
+.rose-ui .edge-details summary { color: #835468; }
+.rose-ui .edge-details summary:hover { color: #193b2d; }
+.rose-ui .edge-guide.rose-guide.ant-card { position: relative; overflow: hidden; background: #fae7ed; border: 0; }
+.rose-ui .rose-guide .ant-card-head-title { position: relative; z-index: 1; color: #5b3b48; }
+.rose-ui .rose-guide .ant-typography { color: #725e66; border-top-color: #ebcbd6; }
+.rose-ui .rose-guide .ant-steps-item-title { color: var(--forest); }
+.rose-ui .rose-history > .ant-card-head { background: #fff8fa; }
+.rose-ui .rose-history .ant-card-head .ant-tag { color: #754258; background: #fbe2eb; border: 0; padding: 4px 12px; border-radius: 99px; }
+.rose-ui .rose-history .ant-table-thead > tr > th { background: #f8f6f4; }
+.rose-ui .rose-history .ant-table-tbody > tr:hover > td { background: #fff5f8 !important; }
+.rose-ui .rose-history .ant-table-expanded-row > td { background: #fff9fb; }
+.rose-ui .ant-pagination .ant-pagination-item-active { background: #fbe2eb; border-color: #e9b3c6; }
+.rose-ui .ant-pagination .ant-pagination-item-active a { color: var(--forest); }
+.rose-ui footer { color: #8a7b80; }
+.rose-login { background-color: #faf7f3; background-image: none; }
+.rose-login > section { border-color: #eed9e1; box-shadow: 0 30px 90px -45px rgb(115 53 77 / 32%); }
+.rose-login .rose-login-story { background: var(--rose); }
+.rose-login .ant-btn-primary { background: var(--forest); border-color: var(--forest); box-shadow: 0 7px 18px -10px rgb(135 68 94 / 45%); }
+.rose-login .ant-btn-primary:not(:disabled):hover { background: #347653; border-color: #347653; }
+.rose-login .ant-input-affix-wrapper-focused { border-color: #ba6e8b; box-shadow: 0 0 0 3px rgb(243 181 199 / 28%); }
+@media (max-width: 1200px) and (min-width: 576px) {
+  .rose-ui .rose-hero-copy { max-width: 84%; }
+}
+@media (max-width: 800px) {
+  .rose-ui .rose-activity .edge-stats { gap: 7px; }
+  .rose-ui .rose-stat { padding-inline: 10px; }
+  .rose-ui .rose-stat strong { font-size: 30px; }
+  .rose-ui .rose-stat span { font-size: 11px; }
+}
+@media (max-width: 575px) {
+  .rose-ui .rose-hero .edge-overview-content { min-height: 235px; }
+  .rose-ui .rose-hero-copy { max-width: 74%; }
+  .rose-ui .rose-hero .edge-overview-content h3.ant-typography { font-size: 35px; }
+  .rose-ui .rose-activity .edge-overview-content { min-height: 205px; }
+  .rose-ui .rose-balance { padding: 10px 14px; }
+  .rose-ui .edge-recent-value strong { font-size: 14px; }
+}
+
+

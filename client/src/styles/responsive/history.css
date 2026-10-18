@@ -1,0 +1,12 @@
+@media (max-width: 1100px) {
+  .history-toolbar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .history-toolbar > .ant-input-search { grid-column: 1 / -1; }
+  .history-toolbar > .ant-select, .history-toolbar > .ant-btn { order: 1; }
+  .history-toolbar > .history-date { min-width: 0; }
+}
+@media (max-width: 767px) {
+  .rose-ui .rose-history > .ant-card-body { padding: 12px; }
+  .rose-ui .rose-history .ant-table-cell { overflow-wrap: anywhere; }
+  .rose-ui .rose-history .ant-table-tbody > tr > td { padding: 16px 12px; }
+  .rose-ui .history-resume:not(:disabled) { min-height: 40px; }
+}

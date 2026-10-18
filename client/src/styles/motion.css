@@ -1,0 +1,67 @@
+/* Interaction feedback uses actual selection, request and payment states. */
+.fee-selection { border: 1px solid #eac4d2; background: #fff5f8; border-radius: 14px; padding: 14px 16px; }
+.fee-selection-name { display: flex; align-items: center; gap: 8px; width: 100%; color: #6c4253; font-size: 13px; font-weight: 500; }
+.fee-selection-name .anticon { color: #347653; }
+.otp-feedback { display: grid; gap: 10px; }
+.edge-ui .otp-feedback .ant-otp-input { transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease; }
+.edge-ui .otp-feedback[data-ready="true"] .ant-otp-input { background: #edf7ee; border-color: #8bb69a; }
+.edge-ui .otp-feedback .ant-otp-input:focus { border-color: #ba6e8b; box-shadow: 0 0 0 3px rgb(243 181 199 / 28%); }
+.receipt-check { display: block; margin: auto; width: 64px; height: 64px; fill: none; stroke: #347653; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.receipt-check circle { fill: #edf7ee; stroke: #d3e9d9; stroke-width: 1.5; }
+.receipt-history-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 16px; font-size: 13px; font-weight: 600; }
+.rose-ui .history-resume:not(:disabled) { border-color: #e6b6c8; background: #fff1f6; color: #65374a; }
+.rose-ui .history-resume .portal-icon { font-size: 12px; }
+.rose-ui .rose-history .ant-table-tbody > tr > td { transition: background-color 180ms ease; }
+.rose-ui .edge-recent-row { transition: background-color 180ms ease; border-radius: 0; }
+@keyframes interactive-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes interactive-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes otp-error-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+}
+@keyframes receipt-check-draw { from { stroke-dashoffset: 48; } to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: no-preference) {
+  .portal-content { animation: page-enter 450ms cubic-bezier(.22,.61,.36,1) both; }
+  .interactive-reveal { animation: interactive-enter 240ms ease-out both; }
+  .interactive-receipt { animation: interactive-enter 320ms ease-out both; }
+  .receipt-check path { stroke-dasharray: 48; animation: receipt-check-draw 500ms ease-out both; }
+  .receipt-history-link { animation: interactive-enter 240ms 200ms ease-out both; }
+  .otp-feedback-error .ant-otp { animation: otp-error-shake 260ms ease-out; }
+  .rose-ui .rose-history .ant-table-tbody > .ant-table-row { animation: interactive-fade 220ms ease-out; }
+}
+
+.scroll-reveal-heading { display: inline-block; }
+@media (prefers-reduced-motion: no-preference) {
+  .dashboard-scroll-reveal [data-scroll-reveal] {
+    transition: opacity 700ms cubic-bezier(.22,.61,.36,1) var(--reveal-delay, 0ms), transform 700ms cubic-bezier(.22,.61,.36,1) var(--reveal-delay, 0ms), background-color 180ms ease;
+  }
+  .dashboard-scroll-reveal [data-reveal-state="waiting"] { opacity: 0; transform: translateY(12px); }
+  .dashboard-scroll-reveal [data-reveal-state="visible"] { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 575px) and (prefers-reduced-motion: no-preference) {
+  .dashboard-scroll-reveal [data-reveal-state="waiting"] { transform: translateY(8px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-scroll-reveal [data-scroll-reveal] { opacity: 1; transform: none; transition: none; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .rose-ui .edge-primary-link { transition: transform 180ms ease, background-color 180ms ease; }
+  .rose-ui .edge-primary-link:hover { transform: translateY(-2px); }
+  .rose-ui .edge-primary-link:active { transform: scale(.98); }
+  .rose-ui .edge-recent-row:hover { background: #fff5f8; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portal-content, .interactive-reveal, .interactive-receipt, .receipt-history-link,
+  .receipt-check path, .otp-feedback-error .ant-otp,
+  .rose-ui .edge-recent-row, .rose-ui .rose-history .ant-table-row { animation: none; }
+}
+

@@ -1,0 +1,85 @@
+/* Edge-to-edge UI trial. Scoped to the authenticated portal. */
+.edge-ui { background: #f8f9f6; color: #233d30; }
+.edge-ui .portal-main { width: min(1480px, calc(100% - 64px)); margin-inline: auto; padding-top: 32px; }
+.edge-ui .portal-content { min-height: 65vh; }
+.edge-ui .ant-card { border: 0; border-radius: 12px; box-shadow: none; background: #fff; }
+.edge-ui .ant-card:hover { border-color: transparent; box-shadow: none; transform: none; }
+.edge-ui .ant-card > .ant-card-body { padding: 28px 32px; }
+.edge-ui .ant-card .ant-card-head { min-height: 72px; padding-inline: 32px; border-bottom: 1px solid #f0f2ed; }
+.edge-ui .ant-card .ant-card-head-title { font-size: 18px; font-weight: 500; letter-spacing: -.025em; }
+.edge-ui .ant-typography h3, .edge-ui h3.ant-typography { margin: 0 0 12px; font-size: 26px; font-weight: 500; letter-spacing: -.04em; }
+.edge-ui h4.ant-typography { margin: 0; font-size: 18px; font-weight: 500; letter-spacing: -.02em; }
+.edge-ui .ant-btn { box-shadow: none; }
+.edge-ui .ant-btn-lg { min-height: 46px; font-size: 14px; font-weight: 500; border-radius: 8px; }
+.edge-ui .ant-btn:not(:disabled):hover { transform: none; }
+.edge-ui .ant-input-affix-wrapper, .edge-ui .ant-select { border-radius: 8px; }
+.edge-ui .ant-input-prefix { color: #92a08f; margin-inline-end: 10px; }
+.edge-ui .edge-payer { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.edge-ui .edge-payer strong { display: block; font-size: 14px; font-weight: 500; }
+.edge-ui .edge-payer span { display: block; font-size: 12px; color: #73816f; margin-top: 5px; }
+.edge-ui .edge-wallet { flex-shrink: 0; text-align: right; }
+.edge-ui .edge-wallet span { margin: 0 0 6px; }
+.edge-ui .edge-details { font-size: 12px; color: #71816f; margin-top: 8px; }
+.edge-ui .edge-details summary { cursor: pointer; color: #54725a; width: fit-content; padding-block: 6px; }
+.edge-ui .edge-details[open] summary { margin-bottom: 8px; }
+.edge-ui .edge-details p { margin: 0; line-height: 1.7; max-width: 65ch; }
+.edge-ui .edge-terms summary { white-space: nowrap; }
+.edge-ui .edge-terms p { max-width: none; text-wrap: pretty; }
+.edge-ui .edge-fee-panel { display: grid; gap: 14px; margin-top: 28px; padding-top: 24px; border-top: 1px solid #edf0e8; }
+.edge-ui .edge-fee-panel h3.ant-typography { font-size: 32px !important; font-weight: 500; letter-spacing: -.04em; padding-block: 10px; }
+.edge-ui .edge-guide.ant-card { background: #f1f4ed; border-left: 1px solid #e4eadd; }
+.edge-ui .edge-guide .ant-card-head { border: 0; }
+.edge-ui .edge-guide .ant-card-head-title { font-size: 15px; }
+.edge-ui .edge-guide .ant-card-body { padding-top: 12px; }
+.edge-ui .edge-guide .ant-steps-item-title { font-size: 14px; }
+.edge-ui .edge-guide .ant-typography { font-size: 12px; line-height: 1.7; color: #74816d; border-top: 1px solid #e1e7da; padding-top: 18px; }
+.edge-ui .edge-otp { display: grid; gap: 16px; margin-top: 28px; padding-top: 24px; border-top: 1px solid #edf0e8; }
+.edge-ui .edge-payment-amount { display: block; font-size: clamp(30px, 4vw, 42px); font-weight: 500; line-height: 1.2; letter-spacing: -.05em; color: #315b3d; font-variant-numeric: tabular-nums; }
+.edge-ui .edge-otp input { min-height: 58px; font-size: 24px; letter-spacing: .4em; text-align: center; font-variant-numeric: tabular-nums; }
+.edge-ui .edge-receipt { border-top: 1px solid #edf0e8; padding-top: 24px; }
+.edge-ui .edge-overview-intro.ant-card { background: #eaf1e4; }
+.edge-ui .edge-overview-content { display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 24px; min-height: 190px; }
+.edge-ui .edge-overview-content .ant-typography { margin-bottom: 0; font-size: 13px; }
+.edge-ui .edge-overview-content h3.ant-typography { margin-bottom: 10px; font-size: 26px; }
+.edge-ui .edge-overview-content h4.ant-typography { font-size: 18px; }
+.edge-ui .edge-primary-link { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 44px; padding: 10px 18px; border-radius: 8px; background: #315f43; color: white; font-size: 14px; font-weight: 500; }
+.edge-ui .edge-primary-link:hover { background: #254e35; color: white; }
+.edge-ui .edge-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; gap: 20px; }
+.edge-ui .edge-stats div { display: grid; gap: 10px; }
+.edge-ui .edge-stats span { font-size: 12px; color: #7b8775; }
+.edge-ui .edge-stats strong { font-size: 32px; line-height: 1; font-weight: 500; letter-spacing: -.04em; }
+.edge-ui .edge-stats .edge-pending { color: #a17b36; }
+.edge-ui .edge-stat-footer { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; width: 100%; }
+.edge-ui .edge-stat-footer small { color: #87907e; font-size: 11px; }
+.edge-ui .edge-stat-footer a, .edge-ui .ant-card-extra a { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; }
+.edge-ui .edge-recent > .ant-card-body { padding: 4px 0; overflow: hidden; border-radius: 0 0 18px 18px; }
+.edge-ui .edge-recent-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 24px; border-bottom: 1px solid #eef1e9; }
+.edge-ui .edge-recent-row:last-child { border: 0; }
+.edge-ui .edge-recent-name { display: grid; gap: 8px; min-width: 0; }
+.edge-ui .edge-recent-name strong { font-size: 14px; font-weight: 500; overflow-wrap: anywhere; }
+.edge-ui .edge-recent-name span { font-size: 12px; color: #809077; }
+.edge-ui .edge-recent-value { display: grid; justify-items: end; gap: 8px; flex-shrink: 0; }
+.edge-ui .edge-recent-value strong { font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.edge-ui .status-tag.ant-tag { min-height: 23px; border: 0; font-size: 11px; font-weight: 500; margin: 0; }
+.edge-ui .ant-table-wrapper .ant-table-thead > tr > th { background: #fafbf8; font-size: 12px; font-weight: 500; letter-spacing: 0; }
+.edge-ui .ant-table-wrapper .ant-table-tbody > tr > td { padding-block: 22px; border-bottom-color: #edf0e8; }
+.edge-ui .ant-table-row { cursor: pointer; }
+.edge-ui footer { font-size: 11px; color: #89917f; padding-top: 24px; }
+@media (max-width: 800px) {
+  .edge-ui .portal-main { width: calc(100% - 40px); }
+  .edge-ui .portal-main { padding-top: 24px; }
+}
+@media (max-width: 520px) {
+  .edge-ui .portal-main { width: calc(100% - 28px); }
+  .edge-ui .portal-main { padding-top: 20px; }
+  .edge-ui .ant-card > .ant-card-body { padding: 22px 18px; }
+  .edge-ui .ant-card .ant-card-head { min-height: 62px; padding-inline: 18px; }
+  .edge-ui .edge-payer { flex-direction: column; gap: 16px; }
+  .edge-ui .edge-wallet { text-align: left; }
+  .edge-ui .edge-overview-content { min-height: 160px; }
+  .edge-ui .edge-recent-row { gap: 12px; align-items: flex-start; }
+  .edge-ui .edge-recent-value strong { font-size: 13px; }
+}
+
+
+

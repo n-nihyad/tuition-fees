@@ -1,0 +1,18 @@
+/* Balanced hierarchy for reading, payment and smaller screens. */
+.portal-content:has(.dashboard-scroll-reveal) { animation: none; }
+.portal-content:focus { outline: none; }
+.skip-link { position: fixed; left: 16px; top: 12px; z-index: 1000; padding: 12px 18px; background: #193b2d; color: white; border-radius: 10px; transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); color: white; }
+.rose-login .ant-typography-secondary, .rose-ui .ant-typography-secondary { color: #5c6f62; }
+.rose-ui .rose-wallet-chip > span { color: #53665a; }
+.rose-nav .text-brand-muted { color: #52675a; }
+.rose-ui .edge-payer > div > span { color: #53665a; font-size: 13px; }
+.rose-ui .rose-stat strong > span { font: inherit; color: inherit; }
+.rose-ui .rose-stat > span, .rose-ui .edge-stat-footer small { color: #526551; }
+*:focus-visible { outline: 2px solid #347653; outline-offset: 3px; }
+.edge-otp .ant-otp-input { scroll-margin-top: 190px; scroll-margin-bottom: 24px; }
+.rose-ui .ant-table-thead > tr > th { color: #4d6254; }
+.rose-ui .payment-status-tag.ant-tag-processing { color: #38536c; background: #edf3f8; }
+.rose-ui .payment-status-tag.ant-tag-success { color: #275f40; background: #edf7ee; }
+.rose-ui .payment-status-tag.ant-tag-error { color: #9b3543; background: #fff1f2; }
+.rose-ui .payment-status-tag.ant-tag-default { color: #53645a; background: #f0f3ef; }

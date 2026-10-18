@@ -1,0 +1,40 @@
+/* Editorial refinement: existing backgrounds are intentionally unchanged. */
+.portal-icon { display: inline-flex; vertical-align: middle; flex-shrink: 0; align-items: center; justify-content: center; font-size: 18px; }
+.rose-nav nav .portal-icon { width: 18px; height: 18px; }
+.rose-nav button > .portal-icon { width: 18px; height: 18px; }
+.rose-ui .rose-brand-mark .portal-icon { font-size: 22px; }
+.rose-ui .ant-card, .rose-ui .rose-hero.ant-card { border-radius: 18px; }
+.rose-ui .edge-primary-link { border-radius: 11px; gap: 24px; box-shadow: none; }
+.rose-ui .edge-primary-link .portal-icon { width: 17px; height: 17px; }
+.rose-ui .edge-primary-link:hover .portal-icon { transform: translateX(2px); }
+.rose-ui .edge-primary-link .portal-icon { transition: transform 180ms ease; }
+.rose-ui .ant-card-extra .portal-icon, .rose-ui .edge-stat-footer .portal-icon { width: 15px; height: 15px; }
+.rose-ui .rose-kicker { font-size: 11px; letter-spacing: .12em; font-weight: 500; }
+.rose-ui .rose-hero .edge-overview-content h3.ant-typography { font-weight: 500; letter-spacing: -.045em; }
+.rose-ui .rose-hero h3 em { line-height: 1.18; }
+.rose-ui .rose-stat { border-radius: 11px; }
+.rose-ui .rose-stat strong { font-weight: 500; font-variant-numeric: tabular-nums; }
+.rose-ui .edge-recent-value strong { font-weight: 600; }
+.rose-ui .edge-recent .ant-card-head::before { content: none; }
+.tuition-slip { display: block; pointer-events: none; }
+.rose-ui .dashboard-tuition-slip { position: absolute; z-index: 0; right: 16px; top: 17px; width: clamp(145px, 15vw, 215px); height: auto; filter: drop-shadow(0 14px 12px rgb(88 46 60 / 12%)); }
+.rose-ui .rose-hero-copy { max-width: 66%; }
+.rose-ui .empty-history-icon { width: 30px; height: 30px; color: #89978a; stroke-width: 1.35; }
+.rose-ui .ant-empty-image:has(.empty-history-icon) { display: grid; place-items: center; height: 44px; }
+.rose-ui .edge-guide .ant-card-head-title { font-weight: 500; }
+.rose-ui footer .portal-icon { width: 14px; height: 14px; }
+.rose-login .login-tuition-slip { align-self: flex-end; width: 112px; height: auto; margin-block: 12px 0; filter: drop-shadow(0 8px 9px rgb(88 46 60 / 10%)); }
+.rose-login .editorial-title-accent { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; }
+.rose-login .ant-input-prefix .portal-icon { width: 18px; height: 18px; }
+.rose-login .ant-btn .portal-icon { width: 17px; height: 17px; }
+@media (min-width: 576px) and (max-width: 1000px) {
+  .rose-ui .dashboard-tuition-slip { width: 100px; top: 24px; right: 0; opacity: .8; }
+  .rose-ui .rose-hero-copy { max-width: calc(100% - 80px); }
+}
+@media (max-width: 575px) {
+  .rose-ui .dashboard-tuition-slip { width: 104px; right: 0; top: 24px; opacity: .8; }
+  .rose-ui .rose-hero-copy { max-width: calc(100% - 86px); }
+}
+
+.rose-nav button > .portal-chevron, .rose-login .portal-chevron { width: 12px; height: 12px; }
+

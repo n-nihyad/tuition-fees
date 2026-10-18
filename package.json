@@ -1,0 +1,11 @@
+{
+  "name": "soa-microservices",
+  "private": true,
+  "scripts": {
+    "test": "python scripts/test_backend.py",
+    "test:backend": "python scripts/test_backend.py",
+    "test:client": "pnpm --dir client test",
+    "test:e2e": "pnpm --dir client run test:e2e",
+    "check:client": "pnpm --dir client run lint && pnpm --dir client run build"
+  }
+}

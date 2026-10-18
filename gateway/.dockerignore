@@ -1,0 +1,16 @@
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.git/
+
+# Local caches and generated artifacts
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.uv-cache/
+.coverage
+.coverage.*
+htmlcov/

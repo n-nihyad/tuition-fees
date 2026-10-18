@@ -1,0 +1,40 @@
+.otp-countdown { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.otp-countdown strong { font-size: 18px; font-variant-numeric: tabular-nums; }
+.fee-selection-name { overflow-wrap: anywhere; }
+.fee-student-info { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.fee-select-option { display: grid; gap: 5px; white-space: normal; overflow-wrap: anywhere; line-height: 1.5; padding-block: 5px; }
+.fee-select-option strong { font-weight: 500; font-size: 13px; }
+.fee-select-option > span { font-size: 12px; color: #53665a; }
+.fee-select-root .fee-select-text { color: #193b2d; }
+.fee-select-root .ant-select-selection-item { color: #193b2d; opacity: 1; }
+.rose-payment .fee-select-root.ant-select-open .ant-select-content-has-value { opacity: 1; }
+.fee-select-popup.ant-select-dropdown { background-color: #fff; color: #193b2d; transition-property: opacity, transform !important; }
+.ant-dropdown { transition-property: opacity, transform !important; }
+.fee-select-popup .ant-select-item-option { color: #193b2d; background-color: #fff; }
+.fee-select-popup .ant-select-item-option-selected:not(.ant-select-item-option-disabled) { background-color: #fbeaf0; color: #193b2d; }
+.fee-select-popup .ant-select-item-option-active:not(.ant-select-item-option-disabled) { background-color: #fff2f6; color: #193b2d; }
+.fee-select-popup.ant-select-dropdown .ant-select-item-option-selected.ant-select-item-option-active:not(.ant-select-item-option-disabled) { background-color: #fbeaf0; color: #193b2d; }
+.fee-select-popup .fee-select-option strong { color: #193b2d; }
+.payment-payer-identity { min-width: 0; }
+.payment-payer-email { overflow-wrap: anywhere; }
+@media (max-width: 767px) {
+  .rose-payment .edge-fee-panel { min-width: 0; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .rose-payment .edge-fee-panel > * { min-width: 0; }
+  .rose-payment .fee-student-info { display: grid; gap: 4px; overflow-wrap: anywhere; }
+  .rose-payment .fee-select-root { min-width: 0; height: auto; min-height: 46px; }
+  .rose-payment .fee-select-content { height: auto; min-height: 44px; padding-block: 10px; }
+  .rose-payment .fee-select-text { display: block; white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.5; overflow-wrap: anywhere; font-size: 14px; }
+  .rose-payment .fee-selection { display: grid; gap: 10px; min-width: 0; padding: 14px; }
+  .edge-ui .edge-fee-panel .fee-selection h3.ant-typography { font-size: clamp(20px, 6vw, 26px) !important; line-height: 1.3; padding: 0; overflow-wrap: anywhere; }
+  .rose-payment .fee-selection > .ant-tag { justify-self: start; margin: 0; }
+  .rose-ui .rose-payment .edge-payer { flex-direction: column; align-items: stretch; gap: 16px; }
+  .rose-payment .payment-payer-identity { width: 100%; text-align: left; }
+  .rose-payment .payment-payer-identity strong { font-size: 15px; line-height: 1.5; }
+  .rose-ui .rose-payment .rose-balance { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; width: 100%; padding: 12px 14px; text-align: left; }
+  .rose-payment .rose-balance strong { margin: 0; overflow-wrap: anywhere; }
+  .rose-payment .edge-details { text-align: left; }
+  .rose-payment .ant-descriptions-item-content { overflow-wrap: anywhere; }
+  .rose-payment .fee-selection { align-items: flex-start; }
+  .rose-payment .fee-selection-name .anticon { flex-shrink: 0; margin-top: 3px; }
+  .rose-payment .edge-otp > .ant-typography { overflow-wrap: anywhere; }
+}

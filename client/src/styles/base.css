@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #193b2d;
+  background: #f5f8f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 4% 0%, rgb(221 242 227 / 52%), transparent 30rem),
+    radial-gradient(ellipse at 96% 100%, rgb(243 181 199 / 12%), transparent 28rem),
+    #f5f8f4;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus-visible {
+  outline: 3px solid rgb(52 118 83 / 35%);
+  outline-offset: 2px;
+}
+
+.ant-card {
+  border-color: #e2eae3;
+  box-shadow:
+    0 2px 5px rgb(25 59 45 / 3%),
+    0 18px 42px -32px rgb(25 59 45 / 26%);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.ant-card:hover {
+  border-color: #d3e4d7;
+  box-shadow:
+    0 5px 12px rgb(25 59 45 / 5%),
+    0 24px 48px -30px rgb(25 59 45 / 32%);
+  transform: translateY(-2px);
+}
+
+.portal-content {
+  animation: content-enter 420ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+

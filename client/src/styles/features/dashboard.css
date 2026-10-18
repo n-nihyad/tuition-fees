@@ -1,0 +1,9 @@
+.rose-ui .rose-hero .edge-overview-content, .rose-ui .rose-activity .edge-overview-content { min-height: 210px; }
+.rose-ui .rose-kicker, .rose-ui .edge-stat-footer small { font-size: 12px; }
+.rose-ui .edge-recent-name span { font-size: 13px; color: #687b70; }
+.rose-ui .payment-status-tag { margin: 0; font-size: 12px; border-radius: 7px; white-space: normal; }
+.recent-payment-link { color: inherit; }
+.rose-ui .recent-payment-link:hover { color: #275f40; }
+.recent-payment-link::after { content: ''; position: absolute; inset: 0; }
+.edge-recent-row:has(.recent-payment-link) { position: relative; }
+.recent-payment-link:focus-visible { outline-offset: 5px; }

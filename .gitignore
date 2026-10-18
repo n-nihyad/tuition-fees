@@ -1,0 +1,35 @@
+# Local configuration (keep the configuration template)
+.env
+.env.*
+!.env.example
+
+# Python environments, caches and installation metadata
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.uv-cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Client dependencies and build/test output
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.tsbuildinfo
+test-results/
+playwright-report/
+blob-report/
+
+# Local undo snapshots (retain on disk)
+.ui-backups/
+.codex-tmp/
+*.log
+.DS_Store
+Thumbs.db
